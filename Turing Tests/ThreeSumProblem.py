@@ -17,36 +17,37 @@ requiredSum = 24
 
 sortedArray = sorted(array)
 
-global mininteger
-mininteger = 0
-maxValue = sortedArray[len(sortedArray)-1]
-minValue = sortedArray[mininteger]
+solution = []
+
+# 1 , 3 , 4 , 6 , 9 , 12
+
+# 6 , 9 , 12
+# 0 , 1 ,  2
 
 def checkSum(x,y,z):
     if((x+y+z)==requiredSum):
         return True
-    return False
+    else:
+        return False
 
-def IsFound():
-    for index,items in enumerate(array):
+def logic():
+    
+    maxValue = sortedArray[len(sortedArray)-1]
+    minValue = sortedArray[0]
+
+    for index,items in enumerate(sortedArray):
         if((index==0) or (index==len(sortedArray)-1)):
             continue
+        
         else:
             if(checkSum(items,maxValue,minValue)):
-                print(" {}  {}  {} ".format(items,maxValue,minValue))
-                return True
+                print(" {}  {}  {} ".format(items,minValue,maxValue))
+                solution.extend([items,minValue,maxValue])
             else:
-                print("hi")
-    
+                if(len(sortedArray)==1):
+                    break
+                sortedArray.pop(0)
+                logic()
 
-
-def ans():
-    global mininteger
-    if(IsFound()):
-        print("found")
-    else:
-        mininteger+=1
-        ans()
-
-# print(sortedArray)
-ans()
+logic()
+print("Solution: {}".format(solution))
