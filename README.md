@@ -20,12 +20,10 @@ Deployment Status: [![Deploy to Heroku](https://github.com/hassanaftab93/REPO-NA
 <details>
   <summary>
     <h2>
-      🛠 SubTopic: What to Explain / Dry Runs etc.
+      🛠 This Repository contains multiple Coding challenges from different code jams / tests / sources
     </h2>
   </summary>
-
-  - Subtopic Detail 1
-  - Subtopic Detail 2
+  
 </details>
 
 <!---------------------------------------- SECTION DIVIDER ---------------------------------------->
